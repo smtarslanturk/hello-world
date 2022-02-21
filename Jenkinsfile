@@ -1,13 +1,11 @@
 pipeline {
     agent any
     environment { workdir = '/var/tmp/'}
-//environment { workdir = '/var/tmp/'}
     stages {
-        stage{('Env-Path')
+        stage('Env-Path')
             steps{
                 echo "Env Var Path: ${env.workdir}"
             }
-        }
         stage('Build') {
             steps {
                 echo "Application building step ..."
